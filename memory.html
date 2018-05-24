@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://use.typekit.net/hfy0vzj.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <meta charset="UTF-8">
+    <title>this is our memory</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .con{
+            font-family: 'Noto Serif CJK SC', 'Noto Serif CJK', 'Source Han Serif SC', ‘ Source Han Serif ’ , source-han-serif-sc, serif;
+            text-align: center;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        body{
+            background-image: url("img/img_4.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            -webkit-background-size: 100% 100%;
+        }
+        .pic{
+            width: 1500px;
+            height: 100%;
+            background-color: #ffab00;
+            opacity: 0.5;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        .text{
+            position: absolute;
+            top:20px;
+            left: 50%;
+            margin-left: -198px;
+        }
+		ul{
+            width: 200px;
+            height: 200px;
+            /*background-color: red;*/
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            margin-left:-100px;
+            transform-style: preserve-3d;
+            /*transform: rotateX(-10deg);*/
+            animation: sport 6s linear 0s infinite normal;
+        }
+        ul li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            font-size: 60px;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        ul li:nth-child(1){
+            background-color: green;
+            transform: rotateY(60deg) translateZ(200px);
+        }
+        ul li:nth-child(2){
+            background-color: blue;
+            transform: rotateY(120deg) translateZ(200px);
+        }
+        ul li:nth-child(3){
+            background-color: yellow;
+            transform: rotateY(180deg) translateZ(200px);
+        }
+        ul li:nth-child(4){
+            background-color: pink;
+            transform: rotateY(240deg) translateZ(200px);
+        }
+        ul li:nth-child(5){
+            background-color: purple;
+            transform: rotateY(300deg) translateZ(200px);
+        }
+        ul li:nth-child(6){
+            background-color: gold;
+            transform: rotateY(360deg) translateZ(200px);
+        }
+        ul li img{
+            width: 200px;
+            height: 200px;
+            border: 5px solid skyblue;
+            box-sizing: border-box;
+        }
+        @keyframes sport {
+            from{
+                transform: rotateX(-10deg) rotateY(0deg);
+            }
+            to{
+                transform: rotateX(-10deg) rotateY(360deg);
+            }
+        }
+		        ul li img{
+            width: 200px;
+            height: 200px;
+            border: 5px solid skyblue;
+            box-sizing: border-box;
+        }
+        ul:hover{
+            animation-play-state: paused;
+        }
+        ul:hover li img{
+            opacity: 0.5;
+        }
+        ul li:hover img{
+            opacity: 1;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="pic"></div>
+        <div class="text">
+                <div>班级成员：（以下排名不分先后）</div>
+                <div>刘长灵 王远鹏 赵梓杰 陈方超 周泰然 杜静怡 冯碧霄</div>
+                <div>金宗睿 李南冰 李文博 李欣然 李昊桐 李佳雨 刘康琦</div>
+                <div>潘依琳 鲁大伟 秦行之 商海威 仁骜岩 谈芯羽 田展睿</div>
+                <div>王津婕  王淼  王省鉴  邢跃   修源  田柳青 杨宸  </div>
+                <div>于程程  张璐  赵玮杰 郑雪莹 马子怡 王漫玉 王子翾</div>
+                <div>潘棉勉 牛浩康 王佳卉 杨令仪  徐韬  薛佳葆 段文博 洪成旭</div>
+                <div>辅导员：谢沛辰 轩霭雯</div>
+                <div>班主任：王帅</div>
+                <div>九班 以上</div>
+        </div>
+        <ul>
+			<li><img src="img/img_1.jpg" alt=""></li>
+			<li><img src="img/img_2.jpg" alt=""></li>
+			<li><img src="img/img_3.jpg" alt=""></li>
+			<li><img src="img/img_4.jpg" alt=""></li>
+			<li><img src="img/img_5.jpg" alt=""></li>
+			<li><img src="img/img_6.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

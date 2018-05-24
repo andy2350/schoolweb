@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: gold;
+            overflow: hidden;
+            position: relative;
+        }
+        .content{
+            width: 500px;
+            height: 650px;
+            /*border: 1px solid #000;*/
+            left:10%;
+            position: absolute;
+        }
+       .nine{
+            height: 200px;
+            position: absolute;
+           top: 175px;
+            left: 45%;
+           -webkit-backface-visibility: hidden;
+           display: none;
+        }
+        div>img{
+              height:200px;
+              position: absolute;
+              top:0;
+              left: 0;
+          }
+        /*.content>div:nth-child(2){*/
+            /*top:30px;*/
+            /*left: 110px;*/
+        /*}*/
+        /*.content>div:nth-child(3){*/
+             /*top:30px;*/
+             /*left: 170px;*/
+         /*}*/
+        /*.content>div:nth-child(4){*/
+              /*top:30px;*/
+              /*left: 230px;*/
+          /*}*/
+        /*.content>div:nth-child(5){*/
+            /*top:30px;*/
+            /*left: 290px;*/
+        /*}*/
+        /*.content>div:nth-child(7){*/
+            /*top:90px;*/
+            /*left: 110px;*/
+        /*}*/
+        /*.content>div:nth-child(8){*/
+            /*top:150px;*/
+            /*left: 110px;*/
+        /*}*/
+        /*.content>div:nth-child(9){*/
+            /*top:210px;*/
+            /*left: 110px;*/
+        /*}*/
+        /*.content>div:nth-child(10){*/
+            /*top:90px;*/
+            /*left: 290px;*/
+        /*}*/
+        /*.content>div:nth-child(11){*/
+            /*top:150px;*/
+            /*left: 290px;*/
+        /*}*/
+        /*.content>div:nth-child(12){*/
+            /*top:210px;*/
+            /*left: 290px;*/
+        /*}*/
+        /*.content>div:nth-child(13){*/
+            /*top:270px;*/
+            /*left: 290px;*/
+        /*}*/
+        /*.content>div:nth-child(14){*/
+            /*top:210px;*/
+            /*left: 230px;*/
+        /*}*/
+        /*.content>div:nth-child(15){*/
+            /*top:210px;*/
+            /*left: 170px;*/
+        /*}*/
+        /*.content>div:nth-child(16){*/
+            /*top:330px;*/
+            /*left: 290px;*/
+        /*}*/
+        /*.content>div:nth-child(17){*/
+            /*top:390px;*/
+            /*left: 290px;*/
+        /*}*/
+        /*.content>div:nth-child(18){*/
+            /*top:450px;*/
+            /*left: 290px;*/
+        /*}*/
+    </style>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+            var eles=new Array(17);
+            for(var i =1;i<=16;i++){
+                eles[i]=$("<div><img src='img/img_1.jpg' alt=''></div>");
+                eles[i].css({
+                    "width": "60px",
+                    "height": "60px",
+                    "position": "absolute",
+                    "top":"-60px"
+                });
+                eles[i].children("img").css({
+                    "width": "60px",
+                    "height":"60px",
+                    "position": "absolute",
+                    "top":"0",
+                    "left":"0"
+                });
+                var n=Math.floor(Math.random()*7+1);
+                var filename="img/img_"+n.toString()+".jpg";
+                eles[i].children("img").attr("src",filename);
+                if(i==1 || i==5 || i==7 || i==9){
+                    eles[i].css("left","110px");
+                }else if(i ==2 || i==10){
+                    eles[i].css("left","170px");
+                }else if(i == 3|| i==11){
+                    eles[i].css("left","230px");
+                }else{
+                    eles[i].css("left","290px");
+                };
+                $(".content").append(eles[i]);
+            };
+            var id = setInterval(function(){
+                for(var i=1;i<=16;i++){
+                    var ele = eles[i];
+                    var top = parseInt(ele.css("top"));
+                    if(i>=1 && i<=4 && top==30){
+                        continue;
+                    }else if(i>=5 && i<=6 && top==90){
+                        continue;
+                    }else if(i>=7 && i<=8 && top==150){
+                        continue;
+                    }else if(i>=9 && i<=12 && top==210){
+                        continue;
+                    }else if(i==13 && top==270){
+                        continue;
+                    }else if(i==14 && top==330){
+                        continue;
+                    }else if(i==15 && top==390){
+                        continue;
+                    }else if(i==16 && top==450){
+                        clearInterval(id);
+                        $(".nine").fadeIn(2000);
+                        setTimeout("location.href='memory.html';",2500);
+                        break;
+                    }
+                    top+=30;
+                    eles[i].css("top",top.toString()+"px");
+                }
+            },200);
+        });
+    </script>
+    <meta charset="UTF-8">
+    <title>animate for us</title>
+</head>
+<body>
+    <div class="content">
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+        <!--<div><img src="img/img_1.jpg" alt=""></div>-->
+    </div>
+    <div class="nine"><img src="nine.png" alt=""></div>
+</body>
+</html>
